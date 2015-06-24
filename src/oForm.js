@@ -79,13 +79,11 @@
           var item,
           type,
           name,
-          checked,
           value;
 
           item = inputs[j];
           type = item.getAttribute('type');
           name = item.getAttribute('name');
-          checked = item.checked;
           value = item.value;
 
           if( item.hasAttribute('required') ){
@@ -120,20 +118,13 @@
               data.push( name + '=' + encodeURIComponent(value) );
               returnData[name] = value;
             }
-
-            if (type === 'radio'){
+            //radio buttons and check boxes have a value whether they're checked or not, so we must test that checked condition here
+            else {
               if(item.checked === true){
                 data.push( name + '=' +  encodeURIComponent(value) );
                 returnData[name] = item.value;
               }
             }
-
-            if(type === 'checkbox'){
-              if(item.checked){
-                data.push( name + '=' + encodeURIComponent(value) );
-                returnData[name] = value;
-              }
-            } 
           }
         }
 
