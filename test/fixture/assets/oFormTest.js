@@ -421,7 +421,7 @@
 
               var phoneOnlyDigits = value.replace(/\D/g, '');
 
-              return phoneOnlyDigits.length >= 10 ? true : false;
+              return phoneOnlyDigits.length >= 7 ? true : false;
 
             },
 
