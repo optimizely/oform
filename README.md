@@ -62,7 +62,7 @@ See below for all the supported options, event handlers, and methods.
 Oform currently has default validation functions for these types of inputs:
 
 * email (checks for a real email)
-* tel (removes non-digits, looks for at least 10 digits)
+* tel (removes non-digits, looks for at least 7 digits)
 * url (looks for a non-empty string)
 * checkbox
 * text (looks for non-empty string)
